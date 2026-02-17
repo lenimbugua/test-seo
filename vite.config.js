@@ -1,6 +1,36 @@
+import { mkdirSync, writeFileSync } from "fs";
+import { resolve } from "path";
 import { fileURLToPath, URL } from "url";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import eslintPlugin from "vite-plugin-eslint";
+
+// Serves /version.json in dev, writes it to dist/ on build
+function versionJsonPlugin() {
+  let version = "unknown";
+  return {
+    name: "version-json",
+    configResolved(config) {
+      const env = loadEnv(config.mode, process.cwd(), "VITE_");
+      version = env.VITE_APP_VERSION || "unknown";
+    },
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url?.startsWith("/version.json")) {
+          res.setHeader("Content-Type", "application/json");
+          res.setHeader("Cache-Control", "no-store");
+          res.end(JSON.stringify({ version }));
+          return;
+        }
+        next();
+      });
+    },
+    closeBundle() {
+      const outDir = resolve(process.cwd(), "dist");
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(resolve(outDir, "version.json"), JSON.stringify({ version }));
+    },
+  };
+}
 
 import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
@@ -40,6 +70,7 @@ export default defineConfig({
       dirs: ["./composables/**"],
       vueTemplate: true,
     }),
+    versionJsonPlugin(),
   ],
   esbuild: {
     drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
