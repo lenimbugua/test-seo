@@ -128,8 +128,8 @@ export function usePopular() {
       gameName: "Haki League",
       category_id: "virtuals",
       providerName: "Kiron",
-      imgUrl: "/haki-league.png",
-      imgFullUrl: "/haki-league.png",
+      imgUrl: "/haki-league.webp",
+      imgFullUrl: "/haki-league.webp",
     },
     {
       id: 552,
@@ -154,8 +154,8 @@ export function usePopular() {
       gameName: "Haki Jackpot",
       category_id: "virtuals",
       providerName: "Kiron",
-      imgUrl: "/haki-jackpot.png",
-      imgFullUrl: "/haki-jackpot.png",
+      imgUrl: "/haki-jackpot.webp",
+      imgFullUrl: "/haki-jackpot.webp",
     },
 
     //   {

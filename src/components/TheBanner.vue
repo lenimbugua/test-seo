@@ -11,7 +11,7 @@ import { useCasinoStore } from "../stores/casino";
 
 const { launchCasino } = useCasino();
 
-const { formCloudflareImage } = formatStuff();
+const { formCloudflareImage, formCloudflareImageSized } = formatStuff();
 
 const { initDefaultSport } = useDefaultSport();
 
@@ -250,9 +250,16 @@ onMounted(() => {
           :key="item.id"
         >
           <img
-            :src="formCloudflareImage(item.image)"
+            :src="formCloudflareImageSized(item.image, 750, 170)"
+            :srcset="`${formCloudflareImageSized(item.image, 750, 170)} 750w, ${formCloudflareImageSized(item.image, 1400, 340)} 1400w`"
+            sizes="(max-width: 768px) 100vw, 750px"
+            width="750"
+            height="170"
             class="w-full cursor-pointer h-full top-0 right-0 bottom-0 left-0 object-cover"
             :alt="item.name + ' game banner'"
+            :loading="i === 0 ? 'eager' : 'lazy'"
+            :fetchpriority="i === 0 ? 'high' : 'auto'"
+            decoding="async"
             @click="launchGame(item.id, item.name, item.routeName)"
           />
         </swiper-slide>

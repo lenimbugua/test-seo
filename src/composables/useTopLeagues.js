@@ -82,9 +82,9 @@ export function useTopLeagues() {
 
   function getTopLeagueImage(competitionName) {
     if (!isTopLeague(competitionName)) {
-      return `https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/bcd51663-91e3-4a07-94b6-eecca05bdd00/public`;
+      return `https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/bcd51663-91e3-4a07-94b6-eecca05bdd00/w=80,h=80,fit=cover,format=webp`;
     }
-    return `/top-leagues/${competitionName}.png`;
+    return `/top-leagues/${competitionName}.webp`;
   }
 
   return {

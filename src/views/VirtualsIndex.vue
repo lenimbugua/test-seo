@@ -69,7 +69,7 @@ const { pending } = storeToRefs(useCasinoStore());
             >
               <img
                 class="w-full h-full md:h-72 md:w-72 inset-0 absolute object-fit sm:object-cover"
-                src="/haki-league.png"
+                src="/haki-league.webp"
               />
             </RouterLink>
             <!-- <RouterLink
@@ -87,7 +87,7 @@ const { pending } = storeToRefs(useCasinoStore());
             >
               <img
                 class="w-full h-full md:h-72 md:w-72 inset-0 absolute object-fit sm:object-cover"
-                src="/haki-jackpot.png"
+                src="/haki-jackpot.webp"
               />
             </RouterLink>
           </div>

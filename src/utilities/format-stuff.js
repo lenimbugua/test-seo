@@ -113,6 +113,14 @@ const formatStuff = () => {
     return `https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/${imageId}/${variant}`;
   };
 
+  // Returns a Cloudflare Images flexible-variant URL resized to the given dimensions.
+  // Requires "Flexible variants" to be enabled in the Cloudflare Images dashboard.
+  const formCloudflareImageSized = (imageId, width, height, { fit = "cover", format = "webp" } = {}) => {
+    const account = "ZY5OwFLlTE2ePHl_IE20jg";
+    const parts = [`w=${width}`, height ? `h=${height}` : null, `fit=${fit}`, `format=${format}`].filter(Boolean);
+    return `https://imagedelivery.net/${account}/${imageId}/${parts.join(",")}`;
+  };
+
   const formattedNumber = (number) =>
     number.toLocaleString(undefined, {
       minimumFractionDigits: 2,
@@ -141,6 +149,7 @@ const formatStuff = () => {
     formatHomeTeamScore,
     formattedNumber,
     formCloudflareImage,
+    formCloudflareImageSized,
     slugify,
     createStandardDateObject,
   };

@@ -3,7 +3,7 @@ import { useDefaultSport } from "@/composables/useDefaultSport";
 import formatStuff from "@/utilities/format-stuff";
 import { useRoute, useRouter } from "vue-router";
 
-const { formCloudflareImage } = formatStuff();
+const { formCloudflareImageSized } = formatStuff();
 
 const { initDefaultSport } = useDefaultSport();
 const router = useRouter();
@@ -25,9 +25,14 @@ const goHome = () => {
     <!-- <img src="/Main2.svg" class="absolute h-full w-full inset-0" /> -->
     <!-- <VerticalLogo /> -->
     <img
-      :src="formCloudflareImage('7fd0073a-6cbd-41db-cbdd-0ef423e78000')"
+      :src="formCloudflareImageSized('7fd0073a-6cbd-41db-cbdd-0ef423e78000', 288, 96)"
+      :srcset="`${formCloudflareImageSized('7fd0073a-6cbd-41db-cbdd-0ef423e78000', 288, 96)} 1x, ${formCloudflareImageSized('7fd0073a-6cbd-41db-cbdd-0ef423e78000', 576, 192)} 2x`"
       alt="Hakibets logo"
+      width="144"
+      height="48"
       class="h-7 sm:w-36 sm:h-12"
+      fetchpriority="high"
+      decoding="async"
     />
     <!-- <img src="/Main.svg" class="absolute h-full w-full inset-0" /> -->
     <!-- <img

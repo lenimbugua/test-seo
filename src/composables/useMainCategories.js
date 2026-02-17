@@ -77,7 +77,7 @@ export function useMainCategories() {
       name: "Haki League",
       category: "virtuals",
       path: hakiLeagueRouteName,
-      img: "/haki-league.png",
+      img: "/haki-league.webp",
       bg: "bg-[#EDB846]",
       id: virtualId,
     },

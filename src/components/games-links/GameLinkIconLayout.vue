@@ -28,6 +28,10 @@ defineProps({
             :src="icon"
             class="inset-0 h-full w-full absolute object-cover rounded-lg"
             alt="haki-league"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
           />
           <span v-if="isNew" class="block absolute right-0 top-0 p-0.5 px-1 rounded-bl-lg border-red-600 bg-[#EF4444] text-[0.4rem] font-bold leading-none text-white">NEW</span>
         </div>

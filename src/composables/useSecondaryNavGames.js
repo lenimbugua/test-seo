@@ -57,7 +57,7 @@ export function useSecondaryNavGames() {
     },
     {
       gameName: "Haki League",
-      imgUrl: "/haki-league.png",
+      imgUrl: "/haki-league.webp",
       launcher: useRouterLauncher,
       routeName: virtualGamesRouteName,
       route: hakiLeagueRouteName,
@@ -140,7 +140,7 @@ export function useSecondaryNavGames() {
     // },
     {
       gameName: "Bet Hub",
-      imgUrl: "/bethub1.png",
+      imgUrl: "/bethub1.webp",
       launcher: useRouterLauncher,
       route: bethubRoute,
       new: true,
