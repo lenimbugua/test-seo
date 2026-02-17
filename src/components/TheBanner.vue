@@ -11,7 +11,7 @@ import { useCasinoStore } from "../stores/casino";
 
 const { launchCasino } = useCasino();
 
-const { formCloudflareImage, formCloudflareImageSized } = formatStuff();
+const { formCloudflareImageSized } = formatStuff();
 
 const { initDefaultSport } = useDefaultSport();
 
