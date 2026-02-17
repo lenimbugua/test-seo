@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scrollbar-hide">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>HakiBets - Online Sports Betting & Casino</title>
+    <meta name="description" content="HakiBets offers online sports betting, live casino games, and virtuals in Kenya. Fast M-Pesa payouts, live odds, and instant deposits." />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DNPEL4C0JW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DNPEL4C0JW");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MCP46SS2");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1303916714258925");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- RTMark Pixel script -->
+    <script
+      src="https://my.rtmark.net/p.js?f=sync&lr=1&partner=a614b3b421c0f6df6a8e3a362db0adda5be30e0497098c530c474f552da3f795"
+      defer
+    ></script>
+    <!-- RTMark Pixel script -->
+
+    <script>
+      (function () {
+        const utm = new URLSearchParams(window.location.search).get(
+          "utm_source"
+        );
+
+        if (utm !== "SAFARICOM") return;
+
+        // Load Alipay WebView SDK dynamically
+        const alipayScript = document.createElement("script");
+        alipayScript.type = "text/javascript";
+        alipayScript.src = "https://appx/web-view.min.js";
+        alipayScript.async = true;
+
+        alipayScript.onload = function () {
+          console.log("SAF script executed");
+          // You can safely use AlipayJSBridge here
+        };
+
+        document.head.appendChild(alipayScript);
+      })();
+    </script>
+
+    <style>
+      #egamings_container {
+        height: 100dvh;
+      }
+    </style>
+  </head>
+
+  <body data-theme="dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MCP46SS2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Meta Pixel (noscript) -->
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1303916714258925&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel (noscript) -->
+
+    <!-- RTMark Pixel (noscript) -->
+    <noscript
+      ><img
+        src="https://my.rtmark.net/img.gif?f=sync&lr=1&partner=a614b3b421c0f6df6a8e3a362db0adda5be30e0497098c530c474f552da3f795"
+        width="1"
+        height="1"
+    /></noscript>
+    <!-- End RTMark Pixel (noscript) -->
+
+    <div id="app">
+      <div class="w-screen h-dvh" id="egamings_container"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      var value = new URL(location.href).searchParams.get("PROPELLER");
+      if (value) {
+        var date = new Date();
+        date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000);
+        document.cookie =
+          "prop_visitor_id=" +
+          (value || "") +
+          "; expires=" +
+          date.toUTCString() +
+          "; path=/";
+      }
+    </script>
+  </body>
+</html>
